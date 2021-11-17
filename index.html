@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta property="og:type" content="website">
@@ -100,6 +100,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -134,11 +135,35 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
 
 </div>
     </header>
@@ -157,6 +182,72 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/17/scrapy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="航">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Code开发者">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/17/scrapy/" class="post-title-link" itemprop="url">scrapy</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-11-17 22:48:39 / 修改时间：23:14:07" itemprop="dateCreated datePublished" datetime="2021-11-17T22:48:39+08:00">2021-11-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="一-概念"><a href="#一-概念" class="headerlink" title="一. 概念"></a>一. 概念</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># scrapy是一个python编写的开源网络爬虫框架</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/17/scrapy/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -184,10 +275,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-11-16 23:34:05 / 修改时间：23:34:49" itemprop="dateCreated datePublished" datetime="2021-11-16T23:34:05+08:00">2021-11-16</time>
+              <time title="创建时间：2021-11-16 23:34:05" itemprop="dateCreated datePublished" datetime="2021-11-16T23:34:05+08:00">2021-11-16</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-17 22:34:19" itemprop="dateModified" datetime="2021-11-17T22:34:19+08:00">2021-11-17</time>
+              </span>
 
           
 
@@ -200,42 +297,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Supervisor"><a href="#Supervisor" class="headerlink" title="Supervisor"></a>Supervisor</h2><p>supervisor是进程管理工具</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><strong>supervisor对python3支持不好，须使用python2</strong></p>
+          <h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>supervisor是进程管理工具，其python3支持不好，须使用python2</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install supervisor</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>运行<strong>echo_supervisord_conf</strong>命令输出默认的配置项，可以如下操作将默认配置保存到文件中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo_supervisord_conf &gt; supervisord.conf</span><br></pre></td></tr></table></figure>
-
-<p>vim 打开编辑supervisord.conf文件，修改</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[include]</span><br><span class="line">files = relative/directory/*.ini</span><br></pre></td></tr></table></figure>
-
-<p>为</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[include]</span><br><span class="line">files = /etc/supervisor/*.conf</span><br></pre></td></tr></table></figure>
-
-<p>include选项指明包含的其他配置文件。</p>
-<p>将编辑后的supervisord.conf文件复制到/etc/目录下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp supervisord.conf /etc/</span><br></pre></td></tr></table></figure>
-
-<p>然后我们在/etc目录下新建子目录supervisor（与配置文件里的选项相同），并在/etc/supervisor/中新建tuotiao管理的配置文件toutiao.conf。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">[inet_http_server]         ; inet (TCP) server disabled by default</span><br><span class="line">port=0.0.0.0:9001        ; ip_address:port specifier, *:port for all iface</span><br><span class="line">username=chen              ; default is no username (open server)</span><br><span class="line">password=123               ; default is no password (open server)</span><br><span class="line"></span><br><span class="line">[supervisorctl]</span><br><span class="line">serverurl=unix:///tmp/supervisor.sock ; use a unix:// URL  for a unix socket</span><br><span class="line">;serverurl=http://127.0.0.1:9001 ; use an http:// url to specify an inet socket</span><br><span class="line">;username=chris              ; should be same as in [*_http_server] if set</span><br><span class="line">;password=123                ; should be same as in [*_http_server] if set</span><br><span class="line">;prompt=mysupervisor         ; cmd line prompt (default &quot;supervisor&quot;)</span><br><span class="line">;history_file=~/.sc_history  ; use readline history if available</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[group:toutiao]</span><br><span class="line">programs=toutiao-app</span><br><span class="line"></span><br><span class="line">[program:toutiao-app]</span><br><span class="line">command=/home/python/scripts/toutiao_app.sh</span><br><span class="line">directory=/home/python/toutiao-backend</span><br><span class="line">user=python</span><br><span class="line">autorestart=true</span><br><span class="line">redirect_stderr=false</span><br><span class="line">loglevel=info</span><br><span class="line">stopsignal=KILL</span><br><span class="line">stopasgroup=true</span><br><span class="line">killasgroup=true</span><br><span class="line"></span><br><span class="line">[program:im]</span><br><span class="line">command=/home/python/scripts/im.sh</span><br><span class="line">directory=/home/python/toutiao-backend</span><br><span class="line">user=python</span><br><span class="line">autorestart=true</span><br><span class="line">redirect_stderr=false</span><br><span class="line">loglevel=info</span><br><span class="line">stopsignal=KILL</span><br><span class="line">stopasgroup=true</span><br><span class="line">killasgroup=true</span><br><span class="line"></span><br><span class="line">[program:caipiao]</span><br><span class="line">command= nohup python3 app.py &gt; python.log 2&gt;&amp;1 &amp;  ; 被监控的进程启动命令</span><br><span class="line">directory=/root/caipiao/                ; 执行前要不要先cd到目录去，一般不用</span><br><span class="line">priority=1                    ;数字越高，优先级越高</span><br><span class="line">numprocs=1                    ; 启动几个进程</span><br><span class="line">autostart=true                ; 随着supervisord的启动而启动</span><br><span class="line">autorestart=true              ; 自动重启。。当然要选上了</span><br><span class="line">startretries=10               ; 启动失败时的最多重试次数</span><br><span class="line">exitcodes=0                   ; 正常退出代码（是说退出代码是这个时就不再重启了吗？待确定）</span><br><span class="line">stopsignal=KILL               ; 用来杀死进程的信号</span><br><span class="line">stopwaitsecs=10               ; 发送SIGKILL前的等待时间</span><br><span class="line">redirect_stderr=true          ; 重定向stderr到stdout</span><br><span class="line"></span><br><span class="line">[program:ss]</span><br><span class="line">command= nohup ssserver -c /etc/shadowsocks.json &amp;  ; 被监控的进程启动命令</span><br><span class="line">directory=/root/                ; 执行前要不要先cd到目录去，一般不用</span><br><span class="line">priority=1                    ;数字越高，优先级越高</span><br><span class="line">numprocs=1                    ; 启动几个进程</span><br><span class="line">autostart=true                ; 随着supervisord的启动而启动</span><br><span class="line">autorestart=true              ; 自动重启。。当然要选上了</span><br><span class="line">startretries=10               ; 启动失败时的最多重试次数</span><br><span class="line">exitcodes=0                   ; 正常退出代码（是说退出代码是这个时就不再重启了吗？待确定）</span><br><span class="line">stopsignal=KILL               ; 用来杀死进程的信号</span><br><span class="line">stopwaitsecs=10               ; 发送SIGKILL前的等待时间</span><br><span class="line">redirect_stderr=true          ; 重定向stderr到stdout</span><br><span class="line">stopasgroup=true              ;stop program之时一并stop其子进程</span><br><span class="line">killasgroup=true              ;在停止program子进程的时候，发送kill信号</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">supervisord -c /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
-
-<p>查看 supervisord 是否在运行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux | grep supervisord</span><br></pre></td></tr></table></figure>
-
-<h3 id="supervisorctl"><a href="#supervisorctl" class="headerlink" title="supervisorctl"></a>supervisorctl</h3><p>我们可以利用supervisorctl来管理supervisor。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">supervisorctl</span><br><span class="line"></span><br><span class="line">&gt; status    <span class="comment"># 查看程序状态</span></span><br><span class="line">&gt; start apscheduler  <span class="comment"># 启动 apscheduler 单一程序</span></span><br><span class="line">&gt; stop toutiao:*   <span class="comment"># 关闭 toutiao组 程序</span></span><br><span class="line">&gt; start toutiao:*  <span class="comment"># 启动 toutiao组 程序</span></span><br><span class="line">&gt; restart toutiao:*    <span class="comment"># 重启 toutiao组 程序</span></span><br><span class="line">&gt; update    ＃ 重启配置文件修改过的程序</span><br></pre></td></tr></table></figure>
-
-<p>执行status命令时，显示如下信息说明程序运行正常：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">supervisor&gt; status</span><br><span class="line">toutiao:toutiao-app RUNNING pid 32091, uptime 00:00:02</span><br></pre></td></tr></table></figure>
-
-<h2 id="shadowsocks"><a href="#shadowsocks" class="headerlink" title="shadowsocks"></a>shadowsocks</h2><h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1. yum install python-setuptools &amp;&amp; easy_install pip</span><br><span class="line">2. pip install shadowsocks</span><br><span class="line"></span><br><span class="line">3. vi /etc/shadowsocks.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;server&quot;</span>: <span class="string">&quot;0.0.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;port_password&quot;</span>:&#123;</span><br><span class="line">   <span class="string">&quot;8886&quot;</span>:<span class="string">&quot;123456789chen&quot;</span>,</span><br><span class="line">   <span class="string">&quot;8887&quot;</span>:<span class="string">&quot;123456789chen&quot;</span></span><br><span class="line">   &#125;,</span><br><span class="line">  <span class="string">&quot;method&quot;</span>: <span class="string">&quot;aes-256-cfb&quot;</span>,</span><br><span class="line">  <span class="string">&quot;timeout&quot;</span>: 300,</span><br><span class="line">  <span class="string">&quot;mode&quot;</span>: <span class="string">&quot;tcp_and_udp&quot;</span>,</span><br><span class="line">  <span class="string">&quot;workers&quot;</span>:2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动-1"><a href="#启动-1" class="headerlink" title="启动"></a>启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssserver -c /etc/shadowsocks.json</span><br><span class="line">ssserver -c /etc/shadowsocks.json -d start <span class="comment"># 后台运行</span></span><br><span class="line">ssserver -c /etc/shadowsocks.json -d stop <span class="comment">#停止</span></span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/16/Supervisor/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -277,10 +348,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-11-16 23:30:47 / 修改时间：23:32:03" itemprop="dateCreated datePublished" datetime="2021-11-16T23:30:47+08:00">2021-11-16</time>
+              <time title="创建时间：2021-11-16 23:30:47" itemprop="dateCreated datePublished" datetime="2021-11-16T23:30:47+08:00">2021-11-16</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-17 22:32:59" itemprop="dateModified" datetime="2021-11-17T22:32:59+08:00">2021-11-17</time>
+              </span>
 
           
 
@@ -296,76 +373,14 @@
           <p>方法一：源文件安装（推荐安装）</p>
 <p>在CentOS和Red Hat系统中，首先添加EPEL仓库，然后更新yum源：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install epel-release</span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
-
-<p>然后安装Redis数据库：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum -y install redis</span><br></pre></td></tr></table></figure>
-
-<p>安装好后启动Redis服务即可：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start redis   #开启</span><br><span class="line">redis-cli shutdown  # 关闭</span><br></pre></td></tr></table></figure>
-
-<p>这里同样可以使用redis-cli进入Redis命令行模式操作。</p>
-<p>另外，为了可以使Redis能被远程连接，需要修改配置文件，路径为/etc/redis.conf</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/redis.conf</span><br></pre></td></tr></table></figure>
-
-<p>需要修改的地方：</p>
-<p>首先，注释这一行：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#bind 127.0.0.1</span><br></pre></td></tr></table></figure>
-
-<p>另外，推荐给Redis设置密码，取消注释这一行：</p>
-<p>#requirepass foobared</p>
-<p>foobared即当前密码，可以自行修改为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requirepass 密码</span><br></pre></td></tr></table></figure>
-
-<p>然后重启Redis服务，使用的命令如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart redis</span><br></pre></td></tr></table></figure>
-
-
-
-<p>systemctl start redis.service #启动redis服务器</p>
-<p>systemctl stop redis.service #停止redis服务器</p>
-<p>systemctl restart redis.service #重新启动redis服务器</p>
-<p>systemctl status redis.service #获取redis服务器的运行状态</p>
-<p>systemctl enable redis.service #开机启动redis服务器</p>
-<p>systemctl disable redis.service #开机禁用redis服务器</p>
-<p> 方法二；压缩包安装</p>
-<p><strong>一、安装</strong></p>
-<p><strong>1、</strong>在官网下载tar.gz的安装包，或者通过wget的方式下载　　</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-4.0.1.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>***2、***解压</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf redis-4.0.1.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>3、编译</p>
-<p>通过make来编译，make是自动编译，会根据Makefile中描述的内容来进行编译。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd redis-4.0</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
-
-<p>可以看到在src目录下生成了几个新的文件。</p>
-<p>4、安装</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>实际上，就是将这个几个文件加到/usr/local/bin目录下去。这个目录在Path下面的话，就可以直接执行这几个命令了。</p>
-<p>可以看到，这几个文件就已经被加载到bin目录下了</p>
-<p>5、启动服务器，来看看安装是否成功。</p>
-<p>使用redis-server命令。</p>
-<p>再启动一个linux客户端，redis-cli打开客户端　　</p>
-<p>6、关闭服务器</p>
-<p>再启动一个linux客户端，通过server-cli shutdown来关闭服务器。</p>
-<p><strong>二、配置</strong></p>
-<p>1、设置redis服务器后台启动</p>
-<p>前面在启动redis服务器后，都是在前台启动的，需要重新启动一个客户端来进行登陆操作。这样非常不方便，</p>
-<p>所以，我们需要设置后台启动。</p>
-<p>daemonize no</p>
-<p>修改为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">daemonize yes</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>卸载redis</strong></p>
-<p>卸载redis服务，只需把/usr/local/bin/目录下的redis删除即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /usr/local/bin/redis*</span><br></pre></td></tr></table></figure>
-
-<p>甚至可以把解压包也删除掉</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /root/redis-stable</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/16/centos%E5%AE%89%E8%A3%85redis/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -415,7 +430,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-16 23:31:02" itemprop="dateModified" datetime="2021-11-16T23:31:02+08:00">2021-11-16</time>
+                <time title="修改时间：2021-11-17 22:32:44" itemprop="dateModified" datetime="2021-11-17T22:32:44+08:00">2021-11-17</time>
               </span>
 
           
@@ -429,88 +444,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="1-我们先看看现有的-python2在哪里"><a href="#1-我们先看看现有的-python2在哪里" class="headerlink" title="1. 我们先看看现有的 python2在哪里"></a>1. 我们先看看现有的 python2在哪里</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@lidan /]# whereis python</span><br><span class="line">python: /usr/bin/python /usr/bin/python2.7 /usr/bin/python.bak /usr/lib/python2.7 /usr/lib64/python2.7 /etc/python /usr/include/python2.7 /usr/share/man/man1/python.1.gz</span><br><span class="line">[root@lidan bin]# ll python*</span><br><span class="line">lrwxrwxrwx. 1 root root    9 5月  27 2016 python2 -&gt; python2.7</span><br><span class="line">-rwxr-xr-x. 1 root root 7136 11月 20 2015 python2.7</span><br><span class="line">lrwxrwxrwx. 1 root root    7 5月  27 2016 python.bak -&gt; python2</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-接下来我们要安装编译-Python3的相关包"><a href="#2-接下来我们要安装编译-Python3的相关包" class="headerlink" title="2. 接下来我们要安装编译 Python3的相关包"></a>2. 接下来我们要安装编译 Python3的相关包</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel</span><br></pre></td></tr></table></figure>
-
-<p>这里面有一个包很关键<code>libffi-devel</code>，因为只有3.7才会用到这个包，如果不安装这个包的话，在 make 阶段会出现如下的报错：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ModuleNotFoundError: No module named &#x27;_ctypes&#x27;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-安装pip，因为-CentOs-是没有-pip-的。"><a href="#3-安装pip，因为-CentOs-是没有-pip-的。" class="headerlink" title="3. 安装pip，因为 CentOs 是没有 pip 的。"></a>3. 安装pip，因为 CentOs 是没有 pip 的。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#运行这个命令添加epel扩展源 </span><br><span class="line">yum -y install epel-release </span><br><span class="line">#安装pip </span><br><span class="line">yum install python-pip</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-可以用-python-安装一下-wget"><a href="#4-可以用-python-安装一下-wget" class="headerlink" title="4. 可以用 python 安装一下 wget"></a>4. 可以用 python 安装一下 wget</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install wget</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="5-我们可以下载-python3-7的源码包了"><a href="#5-我们可以下载-python3-7的源码包了" class="headerlink" title="5. 我们可以下载 python3.7的源码包了"></a>5. 我们可以下载 python3.7的源码包了</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz</span><br><span class="line">#解压缩</span><br><span class="line">tar -zxvf Python-3.7.0.tgz</span><br><span class="line"></span><br><span class="line">#进入解压后的目录，依次执行下面命令进行手动编译</span><br><span class="line">./configure prefix=/usr/local/python3 </span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<p>如果最后没提示出错，就代表正确安装了，在/usr/local/目录下就会有python3目录</p>
-<h3 id="6-添加软链接"><a href="#6-添加软链接" class="headerlink" title="6. 添加软链接"></a>6. 添加软链接</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#添加python3的软链接 </span><br><span class="line">ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3.7 </span><br><span class="line">#添加 pip3 的软链接 </span><br><span class="line">ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3.7</span><br><span class="line">#测试是否安装成功了 </span><br><span class="line">python -V</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-更改yum配置，因为其要用到python2才能执行，否则会导致yum不能正常使用（不管安装-python3的那个版本，都必须要做的）"><a href="#7-更改yum配置，因为其要用到python2才能执行，否则会导致yum不能正常使用（不管安装-python3的那个版本，都必须要做的）" class="headerlink" title="7. 更改yum配置，因为其要用到python2才能执行，否则会导致yum不能正常使用（不管安装 python3的那个版本，都必须要做的）"></a>7. 更改yum配置，因为其要用到python2才能执行，否则会导致yum不能正常使用（不管安装 python3的那个版本，都必须要做的）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/bin/yum </span><br><span class="line">把 #! /usr/bin/python 修改为 #! /usr/bin/python2 </span><br><span class="line">vi /usr/libexec/urlgrabber-ext-down </span><br><span class="line">把 #! /usr/bin/python 修改为 #! /usr/bin/python2</span><br></pre></td></tr></table></figure>
-
-<h3 id="8-virtualenv安装"><a href="#8-virtualenv安装" class="headerlink" title="8. virtualenv安装"></a><strong>8. virtualenv安装</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# pip3 install virtualenv</span><br><span class="line">pip is configured <span class="keyword">with</span> locations that <span class="built_in">require</span> TLS/SSL, however the ssl <span class="built_in">module</span> <span class="keyword">in</span> Python is not available.</span><br><span class="line">Collecting virtualenv</span><br></pre></td></tr></table></figure>
-
-<p>如果出现以上信息，说明要安装openssl </p>
-<p>yum install -y openssl openssl-devel</p>
-<p>yum clean all</p>
-<p>再次执行命令pip3 install virtualenv，发现还是同样的问题。</p>
-<p>查阅资料发现，在./configure过程中，如果没有加上–with-ssl参数时，默认安装的软件涉及到ssl的功能不可用，刚好pip3过程需要ssl模块，而由于没有指定，所以该功能不可用。</p>
-<p>解决办法是重新对python3.6进行编译安装，用一下过程来实现编译安装:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/src/Python-<span class="number">3.6</span><span class="number">.5</span>/</span><br><span class="line">./configure --<span class="keyword">with</span>-ssl --prefix=<span class="regexp">/usr/</span>local/python3</span><br><span class="line">make -j4 &amp;&amp; make install</span><br><span class="line">cd /root/</span><br></pre></td></tr></table></figure>
-
-<p>再次执行安装命令，就可以了</p>
-<p>pip3 install virtualenv</p>
-<p>提示以下信息：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">You are using pip version <span class="number">9.0</span><span class="number">.3</span>, however version <span class="number">10.0</span><span class="number">.1</span> is available.</span><br><span class="line">You should consider upgrading via the <span class="string">&#x27;pip install --upgrade pip&#x27;</span> command.</span><br></pre></td></tr></table></figure>
-
-<p>升级pip</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# pip3 install --upgrade pip</span><br><span class="line">Collecting pip</span><br><span class="line">  Downloading https:<span class="comment">//files.pythonhosted.org/packages/0f/74/ecd13431bcc456ed390b44c8a6e917c1820365cbebcb6a8974d1cd045ab4/pip-10.0.1-py2.py3-none-any.whl (1.3MB)</span></span><br><span class="line">    <span class="number">100</span>% |████████████████████████████████| <span class="number">1.</span>3MB 593kB/s</span><br><span class="line">Installing collected packages: pip</span><br><span class="line">  Found existing installation: pip <span class="number">9.0</span><span class="number">.3</span></span><br><span class="line">    Uninstalling pip-<span class="number">9.0</span><span class="number">.3</span>:</span><br><span class="line">      Successfully uninstalled pip-<span class="number">9.0</span><span class="number">.3</span></span><br><span class="line">Successfully installed pip-<span class="number">10.0</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>9. 安装virtualenvwrapper</strong></p>
-<p>pip3 install virtualenvwrapper</p>
-<p>linux还需要安装一个包，否则找不到virtualenvwrapper.sh文件</p>
-<p>yum install python-virtualenv -y</p>
-<p>首选找到对应的virtualenvwrapper.sh文件的路径：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# find / -name virtualenvwrapper.sh</span><br><span class="line">/usr/local/python3/bin/virtualenvwrapper.sh</span><br></pre></td></tr></table></figure>
-
-<p>创建虚拟环境目录 </p>
-<p>mkdir /virtualenvs</p>
-<p>找到路径之后在/etc/profile中进行配置：</p>
-<p>vim /etc/profile</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> WORKON_HOME=/virtualenvs</span><br><span class="line">source /usr/local/python3/bin/virtualenvwrapper.sh</span><br></pre></td></tr></table></figure>
-
-<p>第一行：virtualenvwrapper存放虚拟环境目录</p>
-<p>第二行：virtrualenvwrapper会安装到python的bin目录下，所以该路径是python安装目录下</p>
-<p>读入配置文件，立即生效</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost virtualenvs]# source /etc/profile</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/premkproject</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/postmkproject</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/initialize</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/premkvirtualenv</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/postmkvirtualenv</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/prermvirtualenv</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/postrmvirtualenv</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/predeactivate</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/postdeactivate</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/preactivate</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/postactivate</span><br><span class="line">virtualenvwrapper.user_scripts creating /virtualenvs/get_env_details</span><br></pre></td></tr></table></figure>
-
-<p>如果运行报错，如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/python: No <span class="built_in">module</span> named virtualenvwrapper</span><br></pre></td></tr></table></figure>
-
-<p>请确保python版本为3.6。如何将系统的python版本替换为3.6，请参考文章 </p>
-<p><a target="_blank" rel="noopener" href="http://www.py3study.com/Article/details/id/320.html">http://www.py3study.com/Article/details/id/320.html</a> </p>
-<h3 id="10-使用虚拟环境"><a href="#10-使用虚拟环境" class="headerlink" title="10.使用虚拟环境"></a>10.使用虚拟环境</h3><ul>
-<li><p>提示：如果不指定python版本，默认安装的是python2的虚拟环境</p>
-</li>
-<li><p>在python2中，创建虚拟环境</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkvirtualenv 虚拟环境名称</span><br><span class="line">例 ：</span><br><span class="line">mkvirtualenv py_django</span><br></pre></td></tr></table></figure></li>
-<li><p>在python3中，创建虚拟环境</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkvirtualenv -p python3 虚拟环境名称</span><br><span class="line">例 ：</span><br><span class="line">mkvirtualenv -p python3 py3_django</span><br></pre></td></tr></table></figure></li>
-<li><p>查看虚拟环境的命令 :</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">workon</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>退出虚拟环境的命令 :</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除虚拟环境的命令 :</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rmvirtualenv 虚拟环境名称</span><br><span class="line"></span><br><span class="line">例 ：删除虚拟环境py3_django</span><br><span class="line"></span><br><span class="line">先退出：deactivate</span><br><span class="line">再删除：rmvirtualenv py3_django</span><br></pre></td></tr></table></figure>
+          <h4 id="1-查看python2"><a href="#1-查看python2" class="headerlink" title="1.  查看python2"></a>1.  查看python2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@lidan /]# whereis python</span><br><span class="line">python: /usr/bin/python /usr/bin/python2.7 /usr/bin/python.bak /usr/lib/python2.7 /usr/lib64/python2.7 /etc/python /usr/include/python2.7 /usr/share/man/man1/python.1.gz</span><br><span class="line">[root@lidan bin]# ll python*</span><br><span class="line">lrwxrwxrwx. 1 root root    9 5月  27 2016 python2 -&gt; python2.7</span><br><span class="line">-rwxr-xr-x. 1 root root 7136 11月 20 2015 python2.7</span><br><span class="line">lrwxrwxrwx. 1 root root    7 5月  27 2016 python.bak -&gt; python2</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/15/CentOS7%E5%AE%89%E8%A3%85Python3.7%E5%8F%8A%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -593,14 +535,32 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/login" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;login" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/login" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;login" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
 
 
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.csdn.net/" title="https:&#x2F;&#x2F;www.csdn.net&#x2F;" rel="noopener" target="_blank">CSDN</a>
+        </li>
+    </ul>
+  </div>
 
       </div>
 
@@ -631,6 +591,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -665,6 +645,13 @@
 
   
 
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
+<script src="/js/algolia-search.js"></script>
 
 
 
