@@ -455,16 +455,12 @@
       </div>
   </nav>
 </div>
-  <div class="sidebar-button motion-element"><i class="fa fa-comment"></i>
-    Chat
-  </a>
-  </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/login" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;login" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/chenhang1" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;chenhang1" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/login" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;login" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+        <a href="https://weibo.com/newlogin?tabtype=search&url=" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;newlogin?tabtype&#x3D;search&amp;url&#x3D;" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
       </span>
   </div>
 
@@ -496,6 +492,25 @@
   <span class="author" itemprop="copyrightHolder">航</span>
 </div>
 
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("11/15/2021 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -535,6 +550,8 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+
 
 <script src="/js/utils.js"></script>
 
